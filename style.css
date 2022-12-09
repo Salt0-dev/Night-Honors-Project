@@ -1,5 +1,5 @@
-*
-body {
+<style>
+  body {
     font-family: Arial, sans-serif;
     text-align: center;
     margin: 0 auto;
@@ -39,3 +39,4 @@ body {
     margin-bottom: 20px;
     padding: 0 20px;
   }
+</style>
