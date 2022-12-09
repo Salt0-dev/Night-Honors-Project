@@ -4,11 +4,12 @@ body {
     text-align: center;
     margin: 0 auto;
     max-width: 800px;
-    background-color: #eee;
+    background-color: #333;
+    color: #fff;
   }
 
   h1, h2, h3 {
-    color: #333;
+    color: #fff;
     text-align: center;
   }
 
@@ -31,7 +32,7 @@ body {
   }
 
   p {
-    color: #666;
+    color: #ddd;
     line-height: 1.5;
     text-align: left;
     margin-top: 20px;
