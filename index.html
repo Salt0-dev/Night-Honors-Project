@@ -74,6 +74,16 @@
     border: solid;
     cursor: pointer;
   }
+  .image-description {
+    font-size: 18px;
+    color: white;
+    background-color: lightgrey;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+  }
 </style>
   <body>
     <h1>Night by Elie Wiesel</h1>
@@ -90,42 +100,28 @@
     </p>
 
 <div id="slideshow">
-  <img src="https://live.staticflickr.com/1713/25885506862_d9c792c89a_h.jpg" alt="Romero, Fred. “Auschwitz concentration camp” flickr, August 15, 2015, https://www.flickr.com/photos/129231073@N06/25885506862."class="slideshow-image" style="display: none;">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Birkenau_gate.JPG" alt="Slideshow Image 2"class="slideshow-image" style="display: none;">
-  <img src="https://live.staticflickr.com/1713/25885506862_d9c792c89a_h.jpg" alt="Slideshow Image 3"class="slideshow-image" style="display: none;">
+    <img src="https://live.staticflickr.com/1713/25885506862_d9c792c89a_h.jpg" alt="Romero, Fred. “Auschwitz concentration camp” flickr, August 15, 2015, https://www.flickr.com/photos/129231073@N06/25885506862."class="slideshow-image" style="display: none;">
+    <div class="image-description">Description for Image 1</div>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Birkenau_gate.JPG" alt="Slideshow Image 2"class="slideshow-image" style="display: none;">
+    <div class="image-description">Description for Image 2</div>
+    <img src="https://live.staticflickr.com/1713/25885506862_d9c792c89a_h.jpg" alt="Slideshow Image 3"class="slideshow-image" style="display: none;">
+    <div class="image-description">Description for Image 3</div>
 </div>
 
 <button onclick="plusSlides(-1)">Previous</button>
 <button onclick="plusSlides(1)">Next</button>
 
 <script>
-  var slideIndex = 0;
-var slides = document.getElementsByClassName("slideshow-image");
-slides[0].style.display = "block";
+   var slideIndex = 0;
 
   function showSlides() {
     var i;
     var slides = document.getElementsByClassName("slideshow-image");
+    var descriptions = document.getElementsByClassName("image-description");
     for (i = 0; i < slides.length; i++) {
       slides[i].style.display = "none"; 
+      descriptions[i].style.display = "none";
     }
-    slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1} 
-    slides[slideIndex-1].style.display = "block"; 
-    setTimeout(showSlides, 12000); // Change image every 12 seconds
-  }
-
-  function plusSlides(n) {
-    slideIndex += n;
-    if (slideIndex > slides.length) {slideIndex = 1}
-    if (slideIndex < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none"; 
-    }
-    slides[slideIndex-1].style.display = "block";
-  }
-
-  showSlides();
 </script>
 
     <h6>Romero, Fred. “Auschwitz concentration camp” flickr, August 15, 2015, https://www.flickr.com/photos/129231073@N06/25885506862.</h6>
